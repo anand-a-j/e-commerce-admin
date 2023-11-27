@@ -85,17 +85,14 @@ class SignInFormBody extends StatelessWidget {
                     isLoading: authProvider.isLoading,
                     title: "Login",
                     onPressed: () {
-                      if (_passwordController.text.length <= 6) {
-                        showSnackBar(context,
-                            "Password length should be greater that 6 charaters");
-                      } else {
+                     
                         if (_signInFormKey.currentState!.validate()) {
                           authProvider.signInUser(
                               context: context,
                               email: _emailController.text.trim(),
                               password: _passwordController.text.trim());
                         }
-                      }
+                      
                     });
               }),
               SizedBox(height: MediaQuery.sizeOf(context).height * 0.03),

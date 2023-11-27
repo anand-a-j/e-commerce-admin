@@ -66,13 +66,13 @@ class AdminProvider extends ChangeNotifier {
   }
 
   // only admin feature
-  void changeOrderStatus(BuildContext context, Order order) {
+  void changeOrderStatus(BuildContext context, Order order,int status) {
     adminServices.changeOrderStatus(
         context: context,
-        status: currentStep + 1,
+        status: status,
         order: order,
         onSuccess: () {
-          _currentStep += 1;
+          _currentStep = status;
         });
     notifyListeners();
   }

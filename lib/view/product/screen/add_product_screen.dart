@@ -133,7 +133,10 @@ class _AddProductScreenState extends State<AddProductScreen> {
                   Stack(
                     children: [
                       CustomTextField(
-                          controller: categoryController, hintText: "Category",isEnabled: true,),
+                        controller: categoryController,
+                        hintText: "Category",
+                        isEnabled: true,
+                      ),
                       Positioned(
                         right: 10,
                         child: DropdownButton(
@@ -160,17 +163,13 @@ class _AddProductScreenState extends State<AddProductScreen> {
                   CustomButton(
                     title: "Sell",
                     onPressed: () {
-                      if (addProduct.images.isEmpty) {
-                        showSnackBar(context, "Add Product Images");
-                      } else {
-                        if (_addProductFormKey.currentState!.validate()) {
-                          addProduct.sellProduct(
-                              context,
-                              nameController.text.trim(),
-                              descriptionController.text.trim(),
-                              priceController.text.trim(),
-                              quantityController.text.trim());
-                        }
+                      if (_addProductFormKey.currentState!.validate()) {
+                        addProduct.sellProduct(
+                            context,
+                            nameController.text.trim(),
+                            descriptionController.text.trim(),
+                            priceController.text.trim(),
+                            quantityController.text.trim());
                       }
                     },
                     isLoading: addProduct.isLoading,

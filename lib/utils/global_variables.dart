@@ -47,4 +47,11 @@ class GlobalVariables {
       'image': 'assets/category/headphone.png',
     },
   ];
+
+   static const List<Map<String, dynamic>> orderStatusList =[
+        {"title": "pending", "value": 0},
+        {"title": "Packed", "value": 1},
+        {"title": "Shipping", "value": 2},
+        {"title": "Delivered", "value": 3}
+      ];
 }
