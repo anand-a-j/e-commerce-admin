@@ -101,19 +101,18 @@ class OrderScreen extends StatelessWidget {
                                   ),
                                 ],
                               ),
-                            const  Row(
+                            Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                               Text(
+                              const  Text(
                                   "Status:",
                                   style: TextStyle(
                                       fontSize: 16,
                                       fontWeight: FontWeight.bold),
                                 ),
-                               
+                                orderStatus(admin.orders![index].status)
                               ],
-                            ),
-                            orderStatus(admin.orders![index].status)
+                            ), 
                             ],
                           ),
                         ),
