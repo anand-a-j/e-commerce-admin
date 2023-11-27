@@ -2,6 +2,7 @@ import 'package:e_commerce_admin/models/orders.dart';
 import 'package:e_commerce_admin/models/product.dart';
 import 'package:e_commerce_admin/models/sales_model.dart';
 import 'package:e_commerce_admin/services/admin_services.dart';
+import 'package:e_commerce_admin/utils/utils.dart';
 import 'package:flutter/material.dart';
 
 class AdminProvider extends ChangeNotifier {
@@ -66,13 +67,17 @@ class AdminProvider extends ChangeNotifier {
   }
 
   // only admin feature
-  void changeOrderStatus(BuildContext context, Order order,int status) {
-    adminServices.changeOrderStatus(
+  void changeOrderStatus(BuildContext context, Order order, int status) async {
+    await adminServices.changeOrderStatus(
         context: context,
         status: status,
         order: order,
         onSuccess: () {
           _currentStep = status;
+          fetchOrders(context);
+          showSnackBar(context, "Order Status Updated Successfully",
+              isError: false);
+          
         });
     notifyListeners();
   }

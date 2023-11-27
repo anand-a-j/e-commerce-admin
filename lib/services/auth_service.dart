@@ -13,6 +13,7 @@ class AuthService {
   void getUserData({
     required BuildContext context,
   }) async {
+    
     try {
       SharedPreferences prefs = await SharedPreferences.getInstance();
       String? token = prefs.getString('x-auth-token');

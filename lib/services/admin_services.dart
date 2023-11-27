@@ -256,13 +256,15 @@ class AdminServices {
   }
 
 // change order status----------------------------------------------------------
-  void changeOrderStatus(
+ changeOrderStatus(
       {required BuildContext context,
       required int status,
       required Order order,
       required VoidCallback onSuccess}) async {
     final userProvider = Provider.of<UserProvider>(context, listen: false);
+  
     try {
+     
       http.Response response = await http.post(
         Uri.parse('$uri/admin/change-order-status'),
         headers: <String, String>{
@@ -281,13 +283,17 @@ class AdminServices {
             response: response,
             context: context,
             onSuccess: () {
+           
               onSuccess();
             });
       }
+    
     } catch (e) {
+      
       if (context.mounted) {
         showSnackBar(context, e.toString());
       }
+
     }
   }
 
