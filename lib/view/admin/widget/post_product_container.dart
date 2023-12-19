@@ -75,7 +75,7 @@ class ProductContainer extends StatelessWidget {
                                         width: 0.8, color: Colors.grey)),
                                 child: Center(
                                   child: Text(
-                                    "Limited Stock (${product.quantity.toInt()})",
+                                    "LimitedStock(${product.quantity.toInt()})",
                                     style: const TextStyle(
                                         color: Colors.orange,
                                         fontWeight: FontWeight.bold),

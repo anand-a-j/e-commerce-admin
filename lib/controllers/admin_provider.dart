@@ -48,10 +48,11 @@ class AdminProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  deleteProduct(
-      BuildContext context, ProductModel product, VoidCallback onSuccess) {
+  deleteProduct(BuildContext context, ProductModel product,
+      VoidCallback onSuccess) async {
     adminServices.deleteProduct(
         context: context, product: product, onSuccess: onSuccess);
+    fetchOrders(context);
   }
 
   fetchEarnings(BuildContext context) async {
@@ -77,7 +78,6 @@ class AdminProvider extends ChangeNotifier {
           fetchOrders(context);
           showSnackBar(context, "Order Status Updated Successfully",
               isError: false);
-          
         });
     notifyListeners();
   }
