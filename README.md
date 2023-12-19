@@ -1,6 +1,6 @@
 # E Commerce Admin App Module
 
-https://github.com/anand-a-j/e-commerce-admin/blob/main/assets/1702977415045.gif
+![]([https://github.com/Your_Repository_Name/Your_GIF_Name.gif](https://github.com/anand-a-j/e-commerce-admin/blob/main/assets/1702977415045.gif))
 
 ## Features
 
