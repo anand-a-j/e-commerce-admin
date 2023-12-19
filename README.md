@@ -1,16 +1,11 @@
-# e_commerce_admin
+# E Commerce Admin App Module
 
-A new Flutter project.
+https://github.com/anand-a-j/e-commerce-admin/blob/main/assets/1702977415045.gif
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+View Orders: View a list of orders along with their details.
+Manage Order Status: Change the status of orders from the admin panel.
+View Total Sales: Get insights into the total sales made on the platform.
+Sales Graph: Visualize sales data with graphs based on product categories.
+Add and Delete Products: Administrators can add new products to the catalog and delete existing products.
