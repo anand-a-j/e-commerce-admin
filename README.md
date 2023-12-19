@@ -1,6 +1,8 @@
 # E Commerce Admin App Module
 
-![](https://github.com/anand-a-j/e-commerce-admin/blob/main/assets/1702977415045.gif)
+<p align="left">
+  <img src="https://github.com/anand-a-j/e-commerce-admin/blob/main/assets/1702977415045.gif" alt="Alt text" width="300" height="650">
+</p>
 
 ## Features
 
